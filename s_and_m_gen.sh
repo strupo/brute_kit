@@ -146,14 +146,16 @@ function m {
 	       	+%Y%B$special
 	        +%y%B$special
 	)
-       month_year_combos=(
+       	month_year_combos=(
                 +%B%Y
                 +%B%y
-       )
-       year_month_combos=(
+       	)
+       	year_month_combos=(
                 +%Y%B
                 +%y%B
-        )
+       	)
+        YYYY=$(date --date="$(date +%Y-%m-15) -$counter month" +%Y)
+        YY=$(date --date="$(date +%Y-%m-15) -$counter month" +%y)
         until [ $counter -gt $previous ]; do
                 for i in ${month_year_specials[@]}; do
                         date --date="$(date +%Y-%m-15) -$counter month" ${i}
@@ -164,9 +166,17 @@ function m {
                 for i in ${month_year_specials[@]}; do
                         date --date="$(date +%Y-%m-15) -$counter month" ${i} | $lc
                 done
-                for i in ${month_month_combos[@]}; do
+                for i in ${month_year_combos[@]}; do
                         date --date="$(date +%Y-%m-15) -$counter month" ${i} | $lc
                 done
+		echo $YYYY$(date --date="$(date +%Y-%m-15) -$counter month" +%B)$special
+        	echo $YY$(date --date="$(date +%Y-%m-15) -$counter month" +%B)$special
+	        echo $YYYY$(date --date="$(date +%Y-%m-15) -$counter month" +%B)
+                echo $YY$(date --date="$(date +%Y-%m-15) -$counter month" +%B)
+                echo $YYYY$(date --date="$(date +%Y-%m-15) -$counter month" +%B | $lc)$special
+                echo $YY$(date --date="$(date +%Y-%m-15) -$counter month" +%B | $lc)$special
+                echo $YYYY$(date --date="$(date +%Y-%m-15) -$counter month" +%B | $lc)
+                echo $YY$(date --date="$(date +%Y-%m-15) -$counter month" +%B | $lc)
         counter=$((counter+1))
         done
 }
