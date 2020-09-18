@@ -3,7 +3,7 @@
 #TODO: New Year Mode:  winter2021 in winter2020
 
 previous="0" # Default value is the current month. More than 2 is probably a waste of time.
-special="!" # Default special character is !, some need escaped like & (just escape them all, it d>
+special="!" # Default special character is !, some need escaped like & (just escape them all)
 format="sm" # Default format is both season(s) and month(s)
 lc="tr [A-Z] [a-z]"
 
@@ -27,12 +27,12 @@ function main {
         if [ "$format" == "s" ]; then
                 s
                 else
-                if [ "$format" == "m" ]; then
-                        m
-                else
-                        s_and_m
-                fi
-        fi
+                	if [ "$format" == "m" ]; then
+                        	m
+                	else
+                        	s_and_m
+                	fi
+        	fi
 }
 
 function s {
@@ -78,56 +78,56 @@ function s {
 	                        echo $YY"summer"
                         else
                                 if [[ 10#$mm -ge 9 && 10#$mm -le 11 ]]; then
-                        echo Autumn$YYYY$special
-                        echo Autumn$YY$special
-                        echo Autumn$YYYY
-                        echo Autumn$YY
-                        echo autumn$YYYY$special
-                        echo autumn$YY$special
-                        echo autumn$YYYY
-                        echo autumn$YY
-                        echo $YYYY"Autumn"$special
-                        echo $YY"Autumn"$special
-                        echo $YYYY"Autumn"
-                        echo $YY"Autumn"
-                        echo $YYYY"autumn"$special
-                        echo $YY"autumn"$special
-                        echo $YYYY"autumn"
-                        echo $YY"autumn"
-                        echo Fall$YYYY$special
-                        echo Fall$YY$special
-                        echo Fall$YYYY
-                        echo Fall$YY
-                        echo fall$YYYY$special
-                        echo fall$YY$special
-                        echo fall$YYYY
-                        echo fall$YY
-                        echo $YYYY"Fall"$special
-                        echo $YY"Fall"$special
-                        echo $YYYY"Fall"
-                        echo $YY"Fall"
-                        echo $YYYY"fall"$special
-                        echo $YY"fall"$special
-                        echo $YYYY"fall"
-                        echo $YY"fall"
+                        		echo Autumn$YYYY$special
+                        		echo Autumn$YY$special
+                        		echo Autumn$YYYY
+		                        echo Autumn$YY
+                		        echo autumn$YYYY$special
+                        		echo autumn$YY$special
+                        		echo autumn$YYYY
+                        		echo autumn$YY
+                        		echo $YYYY"Autumn"$special
+                        		echo $YY"Autumn"$special
+                        		echo $YYYY"Autumn"
+                        		echo $YY"Autumn"
+                        		echo $YYYY"autumn"$special
+                        		echo $YY"autumn"$special
+                        		echo $YYYY"autumn"
+                        		echo $YY"autumn"
+                        		echo Fall$YYYY$special
+                        		echo Fall$YY$special
+                        		echo Fall$YYYY
+                        		echo Fall$YY
+                        		echo fall$YYYY$special
+                        		echo fall$YY$special
+                        		echo fall$YYYY
+                        		echo fall$YY
+                        		echo $YYYY"Fall"$special
+                        		echo $YY"Fall"$special
+                        		echo $YYYY"Fall"
+                        		echo $YY"Fall"
+                        		echo $YYYY"fall"$special
+                        		echo $YY"fall"$special
+                        		echo $YYYY"fall"
+                        		echo $YY"fall"
                                 else
                                         if [[ 10#$mm -ge 12 || 10#$mm -le 2 ]]; then
-                        echo Winter$YYYY$special
-                        echo Winter$YY$special
-                        echo Winter$YYYY
-                        echo Winter$YY
-                        echo winter$YYYY$special
-                        echo winter$YY$special
-                        echo winter$YYYY
-                        echo winter$YY
-                        echo $YYYY"Winter"$special
-                        echo $YY"Winter"$special
-                        echo $YYYY"Winter"
-                        echo $YY"Winter"
-                        echo $YYYY"winter"$special
-                        echo $YY"winter"$special
-                        echo $YYYY"winter"
-                        echo $YY"winter"
+                        			echo Winter$YYYY$special
+                        			echo Winter$YY$special
+                        			echo Winter$YYYY
+                        			echo Winter$YY
+                        			echo winter$YYYY$special
+                        			echo winter$YY$special
+                        			echo winter$YYYY
+                        			echo winter$YY
+                        			echo $YYYY"Winter"$special
+                        			echo $YY"Winter"$special
+                        			echo $YYYY"Winter"
+                        			echo $YY"Winter"
+                        			echo $YYYY"winter"$special
+                        			echo $YY"winter"$special
+                        			echo $YYYY"winter"
+                        			echo $YY"winter"
                                         fi
                                 fi
                         fi
