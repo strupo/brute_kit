@@ -9,6 +9,9 @@ previous="0" # Default value is the current month. More than 2 is probably a was
 special="!" # Default special character is !, some need escaped like & (just escape them all, it d>
 format="sm" # Default format is both season(s) and month(s)
 lc="tr [A-Z] [a-z]"
+
+# Arrays
+
 month_year_combos=(
 	+%B%Y
 	+%B%y
