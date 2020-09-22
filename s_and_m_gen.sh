@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Description: s_and_m_gen.sh generates seasonal and monthly password wordlist based on the current date. 
+# Description: s_and_m_gen.sh generates a seasonal and monthly password wordlist based on the current date. 
 # Author: @strupo_ 
 
 # Variables
