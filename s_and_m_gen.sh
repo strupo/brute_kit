@@ -6,7 +6,7 @@
 # Variables
 
 previous="0" # Default value is the current month. More than 2 is probably a waste of time.
-special="!" # Default special character is !, some need escaped like & (just escape them all, it d>
+special="!" # Default special character is !, some need escaped like & (just escape them all)
 format="sm" # Default format is both season(s) and month(s)
 lc="tr [A-Z] [a-z]"
 
